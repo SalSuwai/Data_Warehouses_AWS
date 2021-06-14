@@ -25,10 +25,19 @@ In this project, we'll apply data warehouses tools and AWS to build an ETL pipel
 
 SONG dataset:
 
+s3://udacity-dend/song_data
+
+example:
+
 song_data/A/B/C/TRABCEI128F424C983.json
 song_data/A/A/B/TRAABJL12903CDCF1A.json
 
 LOG dataset:
+
+s3://udacity-dend/log_data
+
+example:
+
 log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 
