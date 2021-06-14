@@ -193,6 +193,7 @@ artists:
 time :
 
         start_time          TIMESTAMP       NOT NULL PRIMARY KEY,
+        
         hour                INTEGER         NOT NULL,
         
         day                 INTEGER         NOT NULL,
