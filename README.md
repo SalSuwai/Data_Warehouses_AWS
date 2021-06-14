@@ -36,7 +36,7 @@ then we'll use STAR SCHEMA as main schema for this project with a fact table cal
 
 table attributes:
 
-+ staging tables +
++ staging tables 
 
 staging_events:
         artist              VARCHAR,
@@ -75,7 +75,7 @@ staging_songs:
         
  --------------------------------------------------
  
- +final tables+
+ +final tables
  
  
  songplays:
@@ -138,9 +138,13 @@ time :
  
  project steps: 
  1- create an account in AMAZON WEB SERVICES.
+ 
  2- create an IAM role and give it adminstration access. 
+ 
  3- create a redshift cluster via IaC  and give it [roleArn] 
+ 
  4- establish a connection to the redshift cluster then load the data in the staging tables
+ 
  5- extract the needed data to insert it in our final tables thus creating the star schema we wanted .
  
  
