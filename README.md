@@ -1,17 +1,21 @@
-# Data_Warehouses_AWS project summary:
+## Data_Warehouses_AWS project summary:
+
 applying data warehouses tools and AWS to build an ETL pipeline for a database hosted on Redshift. loading data from AWS S3 bucket to staging tables on Redshift and executing SQL statements that create the analytics tables from these staging tables.
 
 ----
 
-Project: Data Warehouse
-Introduction
+#Project: Data Warehouse
+
+####Introduction
+
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
 
 As their data engineer, you are tasked with building an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights in what songs their users are listening to. You'll be able to test your database and ETL pipeline by running queries given to you by the analytics team from Sparkify and compare your results with their expected results.
 
 
-Project Description
+####Project Description
+
 In this project, we'll apply data warehouses tools and AWS to build an ETL pipeline for a database hosted on Redshift. To complete the project, we will need to load data from S3 to staging tables on Redshift and execute SQL statements that create the analytics tables from these staging tables.
 
 
@@ -117,44 +121,69 @@ staging_songs:
  
  
  songplays:
+ 
         songplay_id         INTEGER         IDENTITY(0,1)   PRIMARY KEY,    # Which is a SERIAL attribute.
+        
         start_time          TIMESTAMP,
+        
         user_id             INTEGER ,
+        
         level               VARCHAR,
+        
         song_id             VARCHAR,
+        
         artist_id           VARCHAR ,
+        
         session_id          INTEGER,
+        
         location            VARCHAR,
+        
         user_agent          VARCHAR
  
  --------------------------------------------------
  
  
  users:
+ 
         user_id             INTEGER PRIMARY KEY,
+        
         first_name          VARCHAR,
+        
         last_name           VARCHAR,
+        
         gender              VARCHAR,
+        
         level               VARCHAR
     
 _______________________________________________
     
     
 songs :
+
         song_id             VARCHAR PRIMARY KEY,
+        
         title               VARCHAR ,
+        
         artist_id           VARCHAR ,
+        
         year                INTEGER ,
+        
         duration            FLOAT
 
 ------------------------------------------------
 
 artists:
+
         artist_id           VARCHAR  PRIMARY KEY,
+        
         name                VARCHAR ,
+        
         location            VARCHAR,
+        
         latitude            FLOAT,
+        
         longitude           FLOAT
+        
 
 
 
@@ -162,12 +191,18 @@ artists:
 
 
 time :
+
         start_time          TIMESTAMP       NOT NULL PRIMARY KEY,
         hour                INTEGER         NOT NULL,
+        
         day                 INTEGER         NOT NULL,
+        
         week                INTEGER         NOT NULL,
+        
         month               INTEGER         NOT NULL,
+        
         year                INTEGER         NOT NULL,
+        
         weekday             VARCHAR(20)     NOT NULL
  
  
