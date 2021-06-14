@@ -211,6 +211,7 @@ time :
  
  
  project steps: 
+ 
  1- create an account in AMAZON WEB SERVICES.
  
  2- create an IAM role and give it adminstration access. 
@@ -220,6 +221,8 @@ time :
  4- establish a connection to the redshift cluster then load the data in the staging tables
  
  5- extract the needed data to insert it in our final tables thus creating the star schema we wanted .
+ 
+ 
  
  
  
